@@ -1,0 +1,23 @@
+<div class="table">
+  <%= form_for @csv do |f| %>
+    <div>
+      <%= f.label :name %>
+      <span id="name-box"><%= f.text_field :name %></span>
+    </div>
+    <div>
+      <%= f.label :date %>
+      <span id="date-box"><%= f.date_field :date %>
+    </div></span>
+    <div>
+      <%= f.label :number %>
+      <span id="num-box"><%= f.number_field :number %></span>
+    </div>
+    <div>
+      <%= f.label :description %>
+      <span id="descript-box"><%= f.text_field :description %></span>
+    </div>
+    <div>
+      <%= f.submit %> Submit!
+    </div>
+  <% end %>
+</div>

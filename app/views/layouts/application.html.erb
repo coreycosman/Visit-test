@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsTestVisit</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <div>
+    <% if flash[:notice]%>
+      <p><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:error]%>
+      <p><%= flash[:error] %></p>
+    <% end %>
+  <body>
+    <%= yield %>
+  </body>
+</html>

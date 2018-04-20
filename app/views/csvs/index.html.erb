@@ -1,0 +1,29 @@
+<div class="table">
+  <h1> Create CSV </h1>
+</div>
+<div class="table">
+  <%unless @csv.errors.empty? %>
+    <% @csv.errors.full_messages.each do |error| %>
+      <p><%= error %></p>
+    <% end %>
+  <% end %>
+</div>
+
+<%= render partial: "csv_create_form", locals: {csv: @csv} %>
+
+<div class="container">
+  <h2> CSVs: <h2>
+</div>
+
+<% @csvs.each do |csv| %>
+  <div class="table">
+    <span class="row">
+      <%= csv.name %></span>
+    <span class="row">
+      <%= csv.nice_time %></span>
+    <span class="row">
+      <%= csv.number %></span>
+    <span class="row">
+      <%= csv.description %></span>
+  </div>
+<% end %>
